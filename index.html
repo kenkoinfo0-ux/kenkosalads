@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Ensaladas Saludables y Poke Bowls | Kenko</title>
+    <style>
+        /* Estilos Globales */
+        :root {
+            --primary-color: #2E7D32;
+            --accent-color: #FF5722;
+            --bg-color: #F9FBE7;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+        }
+        
+        /* Box-sizing para evitar que los elementos se desborden de la pantalla */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            overflow-x: hidden; /* Evita scroll horizontal accidental */
+        }
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .text-center { text-align: center; }
+        
+        /* Botones CTA */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 18px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .cta-button:hover {
+            background-color: #E64A19;
+            transform: translateY(-3px);
+            color: var(--white);
+        }
+
+        /* Secciones */
+        .hero {
+            background-color: var(--white);
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        .hero-text { flex: 1; min-width: 250px; }
+        .hero-image { flex: 1; min-width: 250px; text-align: center; }
+        .hero-image img { max-width: 100%; border-radius: 10px; height: auto; }
+
+        .pain-points { margin-bottom: 40px; }
+        .pain-card {
+            background: var(--white);
+            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .offer-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .offer-section h2 { color: var(--white); }
+        .offer-list { list-style: none; padding: 0; }
+        .offer-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+        .offer-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Muestra de Páginas */
+        .samples-section { margin-bottom: 40px; }
+        .samples-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .sample-card {
+            background: var(--white);
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 12px;
+            max-width: 240px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            width: 100%; /* Ajuste para móvil */
+        }
+        .sample-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            height: auto;
+            border: 1px solid #EEEEEE;
+        }
+        .sample-title {
+            margin: 8px 0 0 0;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Autoridad */
+        .brand-section {
+            background-color: var(--white);
+            padding: 40px 20px; /* Ajuste el padding lateral */
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            border: 2px dashed var(--primary-color);
+        }
+
+        /* Caja de Precio Destacada */
+        .price-section {
+            background-color: var(--white);
+            border: 3px solid var(--primary-color);
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.1);
+        }
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin: 10px 0;
+            line-height: 1;
+        }
+        .price-features {
+            max-width: 650px;
+            margin: 20px auto 25px auto;
+            text-align: left;
+            display: inline-block;
+        }
+        .price-features p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            padding-left: 25px;
+            position: relative;
+        }
+        .price-features p::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Garantía */
+        .guarantee-box {
+            background-color: #E8F5E9;
+            border: 1px solid #A5D6A7;
+            border-radius: 10px;
+            padding: 25px;
+            max-width: 650px;
+            margin: 30px auto 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+        .guarantee-badge {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+        .guarantee-text h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        .guarantee-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #444444;
+        }
+
+        /* Responsive Móvil */
+        @media (max-width: 768px) {
+            .hero { text-align: center; padding: 40px 15px; }
+            .hero-text, .hero-image { min-width: 100%; } /* Fuerza a bajar la imagen en móviles */
+            .cta-button { font-size: 1rem; padding: 15px 20px; width: 100%; box-sizing: border-box;}
+            .guarantee-box { flex-direction: column; text-align: center; }
+            .price-tag { font-size: 2.8rem; }
+            .price-features p { font-size: 1rem; }
+        }
+    </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1434202228514015');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1434202228514015&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code →
+<script>
+function trackCheckoutAndRedirect(url) {
+
+    fbq('track', 'InitiateCheckout');
+
+    fbq('trackCustom', 'HotmartCheckoutClick');
+
+    setTimeout(function() {
+        window.location.href = url;
+    }, 300);
+
+    return false;
+}
+</script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Transforma tu cuerpo y disfruta tu alimentación</h1>
+                <p><strong>Pierde peso, tonifica y despídete del hambre sin pasar horas en la cocina con "50 Ensaladas Saludables y Poke Bowls".</strong></p>
+                <p>Olvídate de las dietas tristes a base de lechuga y tomate. Descubre el arte de combinar ingredientes para crear platos irresistibles, saciantes y llenos de color en menos de 10 minutos.</p>
+                <a href="#"
+   class="cta-button"
+   onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">👉 SÍ, ¡QUIERO MI EBOOK HOY!</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/YqZM6WWp/1780874553797.png" alt="Mockup Ebook Kenko 50 Ensaladas y Poke Bowls">
+            </div>
+        </div>
+
+        <div class="pain-points">
+            <h2 class="text-center">¿Te resulta familiar alguna de estas situaciones?</h2>
+            
+            <div class="pain-card">
+                <h3>🥗 "Las ensaladas no me llenan y me muero de hambre"</h3>
+                <p>El error no eres tú, es cómo armas tu plato. En Kenko te enseñamos la ciencia de la saciedad con nuestras <strong>Ensaladas Altas en Proteína</strong> (Cap. 4) para que te sientas llena de energía todo el día.</p>
+            </div>
+
+            <div class="pain-card">
+                <h3>⏰ "Quiero comer sano, pero no tengo tiempo"</h3>
+                <p>La falta de tiempo ya no es excusa. Incluimos <strong>Recetas Express</strong> (Cap. 7) diseñadas para estar listas en menos de 10 minutos. Platos nivel restaurante, en un abrir y cerrar de ojos.</p>
+            </div>
+
+            <div class="pain-card">
+                <h3>🥀 "Las verduras se me marchitan en la heladera"</h3>
+                <p>¡Basta de tirar dinero! En nuestro módulo de <strong>Meal Prep</strong> (Cap. 8), te revelamos el secreto para conservar tus ingredientes frescos y cómo armar ensaladas en frascos para tener la semana resuelta.</p>
+            </div>
+
+            <div class="pain-card">
+                <h3>👅 "La comida sana me resulta insípida"</h3>
+                <p>Aún no has probado nuestros <strong>Aderezos Caseros</strong> (Cap. 9) ni la explosión de un auténtico <strong>Poke Bowl</strong> (Cap. 5). Olvídate de las salsas ultraprocesadas y haz que se te haga agua la boca.</p>
+            </div>
+
+            <div class="text-center">
+                <a href="#"
+   class="cta-button"
+   onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">👉 QUIERO RESOLVER MIS COMIDAS FÁCIL Y SANO</a>
+            </div>
+        </div>
+
+        <div class="offer-section">
+            <h2 class="text-center">¿Qué descubrirás dentro del Ebook?</h2>
+            <p class="text-center">Más que un recetario, es tu guía definitiva para dominar la alimentación saludable.</p>
+            <ul class="offer-list">
+                <li><strong>Los Fundamentos Kenko (Cap. 1 y 2):</strong> La fórmula infalible para construir un plato perfectamente equilibrado que controle tu peso.</li>
+                <li><strong>Ensaladas Quema-Grasa (Cap. 3):</strong> Desde la "Verde Detox" hasta la "Mediterránea", para acelerar tu metabolismo.</li>
+                <li><strong>Combustible para tus Músculos (Cap. 4):</strong> Opciones repletas de proteína para tonificar y cuidar tu masa muscular.</li>
+                <li><strong>El Mundo de los Poke Bowls (Cap. 5):</strong> Únete a la tendencia. Aprende a armar el Poke Bowl perfecto (Salmón, Teriyaki, Vegano).</li>
+                <li><strong>Variedad Plant-Based (Cap. 6):</strong> Exquisitas opciones que demuestran que comer a base de plantas es vibrante.</li>
+                <li><strong>Meal Prep y Aderezos (Cap. 8 y 9):</strong> Evita el desperdicio de comida y baña tus platos con aderezos 100% naturales.</li>
+            </ul>
+        </div>
+
+        <div class="samples-section">
+            <h2 class="text-center">Echa un vistazo al interior del Ebook</h2>
+            <p class="text-center" style="color: var(--text-light); max-width: 700px; margin: 0 auto;">Olvídate de los libros aburridos llenos de texto. Nuestro manual cuenta con un diseño visual, limpio y ultra práctico:</p>
+            <div class="samples-grid">
+                <div class="sample-card">
+                    <img src="https://i.postimg.cc/vT9TpZv8/Screenshot-20260610-184021-2.jpg" alt="Introducción">
+                    <p class="sample-title">Introducción</p>
+                </div>
+                <div class="sample-card">
+                    <img src="https://i.postimg.cc/VvRQryfJ/Screenshot-20260610-184327-2.jpg" alt="Muestra de receta vegana">
+                    <p class="sample-title">Receta vegana</p>
+                </div>
+                <div class="sample-card">
+                    <img src="https://i.postimg.cc/TwNnR1mw/Screenshot-20260610-184304-3.jpg" alt="Muestra de Planificación">
+                    <p class="sample-title">Receta proteica</p>
+                </div>
+                <div class="sample-card">
+                    <img src="https://i.postimg.cc/hv9xVr61/Screenshot-20260610-184624-2.jpg" alt="Muestra de Planificación">
+                    <p class="sample-title">Guías de Organización</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h2>¿Por qué elegir la filosofía Kenko?</h2>
+            <p>En <strong>Kenko</strong>, creemos que la salud no debe ser un castigo. Comer saludable no significa restringir, significa <strong>aprender a elegir y combinar</strong>. Este ebook está diseñado para personas reales, con vidas ocupadas, que quieren verse y sentirse increíbles sin renunciar al placer de una comida deliciosa.</p>
+            <img src="https://i.postimg.cc/sxPHvb7B/file-000000002b9c720e8d9962b172b73a5d.png" alt="Poke Bowls Kenko" style="max-width: 100%; border-radius: 10px; margin-top: 20px;">
+        </div>
+
+        <div id="zona-de-pago" class="price-section">
+            <span style="background-color: var(--primary-color); color: var(--white); padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; letter-spacing: 1px;">🔥 ¡OFERTA EXCLUSIVA DE LANZAMIENTO!</span>
+            
+            <div class="price-tag">8.25 USD</div>
+            <p style="font-size: 1.2rem; margin-top: 0; color: var(--text-light);"><strong>PAGO ÚNICO • ACCESO INMEDIATO</strong></p>
+            
+            <div class="price-features">
+                <p><strong>Ebook Completo:</strong> Acceso total a las 50 recetas saludables, creativas y llenas de sabor.</p>
+                <p><strong>Guía de Planificación Semanal:</strong> El paso a paso definitivo para organizar tu menú sin complicaciones.</p>
+                <p><strong>Manual de Conservación de Alimentos:</strong> Trucos prácticos para que tus vegetales aguanten frescos mucho más tiempo.</p>
+                <p><strong>Información Nutricional General:</strong> Aprende los pilares esenciales de los macros, la fibra y la saciedad real.</p>
+                <p><strong>Aderezos Saludables Caseros:</strong> Recetas de salsas e infalibles vinagretas para dar vida a tus platos sin sumar calorías vacías.</p>
+            </div>
+            
+            <br>
+            <a href="#"
+   class="cta-button"
+   onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">🛒 COMPRAR EL EBOOK COMPLETO AHORA</a>
+            
+            <div class="guarantee-box">
+                <div class="guarantee-badge">🛡️</div>
+                <div class="guarantee-text">
+                    <h4>Garantía de Satisfacción de 7 Días</h4>
+                    <p>Queremos que tomes acción con total tranquilidad. Explora el contenido, prepara los bowls y saborea las recetas. Si por alguna razón el material no cumple con tus expectativas, puedes solicitar el reembolso completo de tu dinero dentro de los primeros 7 días. Tu inversión está 100% protegida.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
