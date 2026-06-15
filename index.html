@@ -77,6 +77,24 @@
         .hero-image { flex: 1; min-width: 250px; text-align: center; }
         .hero-image img { max-width: 100%; border-radius: 10px; height: auto; }
 
+        /* Estilo para el Bono Especial */
+        .bonus-alert {
+            background-color: #FFF3E0;
+            border: 2px dashed var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #D84315;
+            font-size: 1.05rem;
+        }
+        .bonus-alert a {
+            color: var(--accent-color);
+            transition: color 0.2s;
+        }
+        .bonus-alert a:hover {
+            color: #BF360C;
+        }
+
         .pain-points { margin-bottom: 40px; }
         .pain-card {
             background: var(--white);
@@ -186,6 +204,21 @@
             left: 0;
         }
 
+        /* Sección Individual Air Fryer */
+        .airfryer-section {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-color);
+        }
+        .airfryer-section .price-tag {
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+
         /* Garantía */
         .guarantee-box {
             background-color: #E8F5E9;
@@ -222,6 +255,7 @@
             .guarantee-box { flex-direction: column; text-align: center; }
             .price-tag { font-size: 2.8rem; }
             .price-features p { font-size: 1rem; }
+            .bonus-alert { font-size: 0.95rem; text-align: left; }
         }
     </style>
 <!-- Meta Pixel Code -->
@@ -277,7 +311,12 @@ function trackCheckoutAndRedirect(url) {
                 <h1>Transforma tu cuerpo y disfruta tu alimentación</h1>
                 <p><strong>Pierde peso, tonifica y despídete del hambre sin pasar horas en la cocina con "50 Ensaladas Saludables y Poke Bowls".</strong></p>
                 <p>Olvídate de las dietas tristes a base de lechuga y tomate. Descubre el arte de combinar ingredientes para crear platos irresistibles, saciantes y llenos de color en menos de 10 minutos.</p>
-                <a href="#"
+                
+                <div class="bonus-alert">
+                    🎁 <strong>Bono especial incluido:</strong> Además recibirás GRATIS nuestro ebook <a href="#seccion-airfryer"><strong>"Air Fryer fit: 30 recetas saludables"</strong></a> (incluye desayunos, meriendas, almuerzos, cenas, snacks y postres).
+                </div>
+
+                <a href="https://pay.hotmart.com/F106218432I?bid=1781014880280"
    class="cta-button"
    onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">👉 SÍ, ¡QUIERO MI EBOOK HOY!</a>
             </div>
@@ -310,7 +349,7 @@ function trackCheckoutAndRedirect(url) {
             </div>
 
             <div class="text-center">
-                <a href="#"
+                <a href="https://pay.hotmart.com/F106218432I?bid=1781014880280"
    class="cta-button"
    onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">👉 QUIERO RESOLVER MIS COMIDAS FÁCIL Y SANO</a>
             </div>
@@ -366,6 +405,7 @@ function trackCheckoutAndRedirect(url) {
             
             <div class="price-features">
                 <p><strong>Ebook Completo:</strong> Acceso total a las 50 recetas saludables, creativas y llenas de sabor.</p>
+                <p><strong>🎁 BONO GRATIS:</strong> Ebook <strong>"Air Fryer Fit"</strong> con 30 recetas saludables (desayunos, meriendas, almuerzos, cenas y postres).</p>
                 <p><strong>Guía de Planificación Semanal:</strong> El paso a paso definitivo para organizar tu menú sin complicaciones.</p>
                 <p><strong>Manual de Conservación de Alimentos:</strong> Trucos prácticos para que tus vegetales aguanten frescos mucho más tiempo.</p>
                 <p><strong>Información Nutricional General:</strong> Aprende los pilares esenciales de los macros, la fibra y la saciedad real.</p>
@@ -373,7 +413,7 @@ function trackCheckoutAndRedirect(url) {
             </div>
             
             <br>
-            <a href="#"
+            <a href="https://pay.hotmart.com/F106218432I?bid=1781014880280"
    class="cta-button"
    onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">🛒 COMPRAR EL EBOOK COMPLETO AHORA</a>
             
@@ -384,6 +424,27 @@ function trackCheckoutAndRedirect(url) {
                     <p>Queremos que tomes acción con total tranquilidad. Explora el contenido, prepara los bowls y saborea las recetas. Si por alguna razón el material no cumple con tus expectativas, puedes solicitar el reembolso completo de tu dinero dentro de los primeros 7 días. Tu inversión está 100% protegida.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- SECCIÓN DE VENTA INDIVIDUAL AIR FRYER -->
+        <div id="seccion-airfryer" class="airfryer-section">
+            <h2>¿Solo te interesa el recetario para Air Fryer?</h2>
+            
+            <!-- IMPORTANTE: Reemplaza este enlace (src) por la URL de la imagen de tu mockup real -->
+            <img src="https://i.postimg.cc/pTQ6jh2X/file-000000008bec720e909af76b4cb15e0e.png" alt="Mockup eBook Air Fryer Fit" style="max-width: 100%; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            
+            <p style="max-width: 700px; margin: 0 auto 15px auto; color: var(--text-light);">
+                Si prefieres, puedes adquirir únicamente nuestro ebook <strong>"Air Fryer fit: 30 recetas saludables"</strong>. Descubre cómo sacar el máximo provecho a tu freidora de aire con comidas rápidas, crujientes y sin aceite extra. Incluye opciones para desayunos, almuerzos, cenas, meriendas, snacks y postres.
+            </p>
+            <div class="price-tag">5.00 USD</div>
+            
+            <!-- IMPORTANTE: Reemplaza el # debajo por el enlace de checkout de Hotmart del recetario Air Fryer solo -->
+            <a href="https://pay.hotmart.com/P106329475C" 
+               class="cta-button" 
+               style="background-color: var(--primary-color);"
+               onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/P106329475C');">
+               👉 COMPRAR SOLO EBOOK AIR FRYER
+            </a>
         </div>
 
     </div>
