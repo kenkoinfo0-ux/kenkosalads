@@ -219,6 +219,21 @@
             font-size: 3rem;
         }
 
+        /* Sección Individual Antiinflamatoria */
+        .antiinflamatoria-section {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #FF9800; /* Color distintivo */
+        }
+        .antiinflamatoria-section .price-tag {
+            color: #FF9800;
+            font-size: 3rem;
+        }
+
         /* Garantía */
         .guarantee-box {
             background-color: #E8F5E9;
@@ -313,7 +328,7 @@ function trackCheckoutAndRedirect(url) {
                 <p>Olvídate de las dietas tristes a base de lechuga y tomate. Descubre el arte de combinar ingredientes para crear platos irresistibles, saciantes y llenos de color en menos de 10 minutos.</p>
                 
                 <div class="bonus-alert">
-                    🎁 <strong>Bono especial incluido:</strong> Además recibirás GRATIS nuestro ebook <a href="#seccion-airfryer"><strong>"Air Fryer fit: 30 recetas saludables"</strong></a> (incluye desayunos, meriendas, almuerzos, cenas, snacks y postres).
+                    🎁 <strong>¡2 Bonos especiales incluidos!</strong> Además recibirás GRATIS nuestros ebooks <a href="#seccion-airfryer"><strong>"Air Fryer fit: 30 recetas saludables"</strong></a> y el nuevo <a href="#seccion-antiinflamatoria"><strong>"Cocina Antiinflamatoria: 20 recetas"</strong></a>.
                 </div>
 
                 <a href="https://pay.hotmart.com/F106218432I?bid=1781014880280"
@@ -405,7 +420,8 @@ function trackCheckoutAndRedirect(url) {
             
             <div class="price-features">
                 <p><strong>Ebook Completo:</strong> Acceso total a las 50 recetas saludables, creativas y llenas de sabor.</p>
-                <p><strong>🎁 BONO GRATIS:</strong> Ebook <strong>"Air Fryer Fit"</strong> con 30 recetas saludables (desayunos, meriendas, almuerzos, cenas y postres).</p>
+                <p><strong>🎁 BONO GRATIS 1:</strong> Ebook <strong>"Air Fryer Fit"</strong> con 30 recetas saludables.</p>
+                <p><strong>🎁 BONO GRATIS 2:</strong> Ebook <strong>"Cocina Antiinflamatoria"</strong> con 20 recetas para nutrir y desinflamar tu cuerpo.</p>
                 <p><strong>Guía de Planificación Semanal:</strong> El paso a paso definitivo para organizar tu menú sin complicaciones.</p>
                 <p><strong>Manual de Conservación de Alimentos:</strong> Trucos prácticos para que tus vegetales aguanten frescos mucho más tiempo.</p>
                 <p><strong>Información Nutricional General:</strong> Aprende los pilares esenciales de los macros, la fibra y la saciedad real.</p>
@@ -415,7 +431,7 @@ function trackCheckoutAndRedirect(url) {
             <br>
             <a href="https://pay.hotmart.com/F106218432I?bid=1781014880280"
    class="cta-button"
-   onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">🛒 COMPRAR EL EBOOK COMPLETO AHORA</a>
+   onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/F106218432I?bid=1781014880280');">🛒 COMPRAR EL PAQUETE COMPLETO AHORA</a>
             
             <div class="guarantee-box">
                 <div class="guarantee-badge">🛡️</div>
@@ -430,7 +446,6 @@ function trackCheckoutAndRedirect(url) {
         <div id="seccion-airfryer" class="airfryer-section">
             <h2>¿Solo te interesa el recetario para Air Fryer?</h2>
             
-            <!-- IMPORTANTE: Reemplaza este enlace (src) por la URL de la imagen de tu mockup real -->
             <img src="https://i.postimg.cc/pTQ6jh2X/file-000000008bec720e909af76b4cb15e0e.png" alt="Mockup eBook Air Fryer Fit" style="max-width: 100%; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
             
             <p style="max-width: 700px; margin: 0 auto 15px auto; color: var(--text-light);">
@@ -438,7 +453,6 @@ function trackCheckoutAndRedirect(url) {
             </p>
             <div class="price-tag">5.00 USD</div>
             
-            <!-- IMPORTANTE: Reemplaza el # debajo por el enlace de checkout de Hotmart del recetario Air Fryer solo -->
             <a href="https://pay.hotmart.com/P106329475C" 
                class="cta-button" 
                style="background-color: var(--primary-color);"
@@ -447,7 +461,31 @@ function trackCheckoutAndRedirect(url) {
             </a>
         </div>
 
+        <!-- SECCIÓN DE VENTA INDIVIDUAL COCINA ANTIINFLAMATORIA -->
+        <div id="seccion-antiinflamatoria" class="antiinflamatoria-section">
+            <h2>¿Quieres desinflamar tu cuerpo? Llévate este recetario</h2>
+            
+            <!-- IMPORTANTE: Reemplaza este enlace (src) por la URL de la imagen de tu mockup real de Cocina Antiinflamatoria -->
+            <img src="https://i.postimg.cc/ZRsBcW9t/1781549965666.png" alt="Mockup eBook Cocina Antiinflamatoria" style="max-width: 100%; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            
+            <p style="max-width: 700px; margin: 0 auto 15px auto; color: var(--text-light);">
+                Si prefieres, puedes adquirir únicamente nuestro ebook <strong>"Cocina Antiinflamatoria: 20 recetas"</strong>. Entiende cómo la alimentación puede ayudarte y descubre un menú diseñado con los mejores ingredientes aliados. Incluye la famosa Golden Milk, desayunos nutritivos, almuerzos llenos de color, snacks y cenas reconfortantes.
+            </p>
+            
+            <!-- Modifica el precio según corresponda -->
+            <div class="price-tag">5.00 USD</div>
+            
+            <!-- IMPORTANTE: Reemplaza el # y los enlaces de abajo por tu link de checkout de Hotmart del recetario Antiinflamatorio solo -->
+            <a href="https://pay.hotmart.com/B106342995K"
+               class="cta-button" 
+               style="background-color: #FF9800;"
+               onclick="return trackCheckoutAndRedirect('https://pay.hotmart.com/B106342995K');">
+               👉 COMPRAR SOLO RECETAS ANTIINFLAMATORIAS
+            </a>
+        </div>
+
     </div>
 
 </body>
 </html>
+
